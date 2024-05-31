@@ -1,9 +1,14 @@
+import os
+from dotenv import load_dotenv
+
 import utils
 import streamlit as st
 from streaming import StreamHandler
 
 from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationChain
+
+load_dotenv()
 
 st.set_page_config(page_title="Chatbot", page_icon="💬")
 st.header('Basic Chatbot')
